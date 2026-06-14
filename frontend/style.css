@@ -1,0 +1,198 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-green: #4ade80;
+    --border: #334155;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+}
+
+/* Dashboard de Totais */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-total {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.card-total h3 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.card-total p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#card-geral {
+    border-color: var(--accent-green);
+}
+
+#card-geral p {
+    color: var(--accent-green);
+}
+
+/* Grid de Seções principais */
+.grid-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.section-box {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.section-box h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.row-inputs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input, select {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 0.6rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    border-color: var(--accent);
+}
+
+button {
+    background: var(--accent);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Listas de Itens */
+.item-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.item-info span {
+    display: block;
+}
+
+.item-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.item-value {
+    font-weight: 500;
+}
+
+/* Listas Variáveis (Agrupamento por Categorias) */
+.category-block {
+    margin-bottom: 1.5rem;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+}
+
+/* Projeção de Parcelas */
+.future-months {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.future-months h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
