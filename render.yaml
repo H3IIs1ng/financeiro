@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: financeiro-api
+    runtime: java
+    repo: https://github.com/H3IIs1ng/financeiro
+    rootDir: backend/api
+    buildCommand: chmod +x mvnw && ./mvnw clean package -DskipTests
+    startCommand: java -jar target/api-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://db.wihcapqflxrpglxkqxzb.supabase.co:5432/postgres?sslmode=require
+      - key: SPRING_DATASOURCE_USERNAME
+        value: postgres
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: R0dr1g0#@24041998
