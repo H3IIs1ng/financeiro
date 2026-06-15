@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
 
-COPY . .
+COPY backend/api/ .
 
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
